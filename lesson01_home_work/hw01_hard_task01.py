@@ -1,3 +1,6 @@
+# coding=utf-8
+
+import math
 import sys
 
 __author__ = 'Ваши Ф.И.О.'
@@ -15,11 +18,9 @@ __author__ = 'Ваши Ф.И.О.'
 # если точно известно, что её значение не изменялось?
 
 # Подсказка: это значение точно есть ;)
-a = 1000000
+
+a = float('inf')
 print(a == a ** 2)
 print(a == a * 2)
 print(a > 999999)
 
-for x in range(999999, sys.maxsize):
-    if (x == x ** 2) and (x == x * 2):  # and (a > x):
-        print('x =', x)
