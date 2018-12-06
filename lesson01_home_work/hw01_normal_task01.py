@@ -10,12 +10,23 @@ __author__ = 'Ваши Ф.И.О.'
 # Подсказки:
 # * постарайтесь решить задачу с применением арифметики и цикла while;
 # * при желании и понимании решите задачу с применением цикла for.
+
+
 x = 58375
-max_value = 0
 
+print('max_number = ', max(str(x)))
+
+max_number = 0
 for c in str(x):
-    if int(c) > max_value:
-        max_value = int(c)
+    if int(c) > max_number:
+        max_number = int(c)
 
-print('max_value = ', max_value)
+print('max_number = ', max_number)
 
+i = 0
+while i < len(str(x)):
+    if int(i) > max_number:
+        max_number = int(i)
+    i += 1
+
+print('max_number = ', max_number)

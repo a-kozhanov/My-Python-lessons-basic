@@ -9,6 +9,15 @@ __author__ = 'Ваши Ф.И.О.'
 # * при желании решите задачу с применением цикла for.
 
 # код пишем тут...
-for x in range(10):
-    print(x)
 
+number = input('Введите произвольное число: ')
+
+for x in range(len(number)):
+    print(number[x])
+
+print()
+
+i = 0
+while i < len(number):
+    print(number[i])
+    i += 1

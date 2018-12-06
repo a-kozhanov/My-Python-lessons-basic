@@ -1,8 +1,5 @@
 # coding=utf-8
 
-import math
-import sys
-
 __author__ = 'Ваши Ф.И.О.'
 
 # Задание-1:
