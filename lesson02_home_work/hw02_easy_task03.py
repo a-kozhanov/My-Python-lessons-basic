@@ -9,8 +9,9 @@ list_numbers = [2, 15, 9, 20, 7, 12, 1, 23]
 new_list = []
 
 for item in list_numbers:
-    if item % 2:
+    if item % 2 == 0:
         new_list.append(item * 2)
+        print(item)
     else:
         new_list.append(item / 4)
 

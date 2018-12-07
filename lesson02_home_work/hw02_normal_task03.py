@@ -7,9 +7,10 @@
 
 import random
 
+n = int(input('Введите кол-во элементов: '))
 list_random_numbers = []
 
-for i in range(10):
+for i in range(n):
     list_random_numbers.append(random.randint(-100, 100))
 
 print(list_random_numbers)

@@ -13,3 +13,6 @@ for item in list_fruits_2:
         list_fruits_1.remove(item)
 
 print(list_fruits_1)
+
+list_fruits_1 = ["яблоко", "банан", "киви", "арбуз", "груша", "мандарин"]
+list_fruits_2 = ["яблоко", "банан", "киви", "арбуз", "дыня", "гранат"]

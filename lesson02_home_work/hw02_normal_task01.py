@@ -6,3 +6,14 @@
 # но только если результаты извлечения корня не имеют десятичной части и
 # если такой корень вообще можно извлечь
 # Пример: Дано: [2, -5, 8, 9, -25, 25, 4]   Результат: [3, 5, 2]
+
+from math import sqrt
+
+list_numbers = [2, -5, 8, 9, -25, 25, 4]
+list_results = []
+
+for i in list_numbers:
+    if i > 0 and sqrt(i) % 1 == 0:
+        list_results.append(int(sqrt(i)))
+
+print(list_results)
