@@ -11,30 +11,40 @@
 #  (т.е. 2 символа для дня, 2 - для месяца, 4 - для года)
 
 # Пример корректной даты
-date = '01.11.1985'
+# date = '01.11.1985'
 
 # Примеры некорректных дат
-date = '01.22.1001'
-date = '1.12.1001'
-date = '-2.10.3001'
-
-import time
+# date = '01.22.1001'
+# date = '1.12.1001'
+# date = '-2.10.3001'
 
 
-# date_str = input("Date:")
-def validate_date(date_str):
-    try:
-        time.strptime(date_str, "%d.%m.%Y")
-        valid = True
-        print('Дата введена корректно')
-        return True
-    except ValueError:
-        valid = False
-        print('Дата введена не корректно!')
-        return False
+str_date = raw_input('Введите дату (в формате 01.11.1985): ')
+list_date = str_date.split('.')
+print(list_date, len(list_date))
 
+if len(list_date) != 3:
+    print('Введён неправильный формат даты')
+    exit(1)
 
-validate_date('01.11.1985')
-validate_date('01.22.1001')
-validate_date('1.12.1001')
-validate_date('-2.10.3001')
+if len(list_date[0]) != 2 or len(list_date[1]) != 2 or len(list_date[2]) != 4:
+    print('Введён неправильный формат даты')
+    exit(1)
+
+int_day = int(list_date[0])
+int_month = int(list_date[1])
+int_year = int(list_date[2])
+
+if 1 < int_day > 31:
+    print('Не корректный день')
+    exit(1)
+
+if 1 < int_month > 12:
+    print('Не корректный месяц')
+    exit(1)
+
+if 1 < int_year > 9999:
+    print('Не корректный год')
+    exit(1)
+
+print('Дата введена правильно:', str_date)
